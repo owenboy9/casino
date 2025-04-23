@@ -33,6 +33,8 @@ type ReelProps = {
   spinTrigger: boolean;
 };
 
+const spinningSymbols = [...symbols, ...symbols, ...symbols];
+
 const Reel = ({ spinTrigger }: ReelProps) => {
   const [position, setPosition] = useState(0);
   const [spinning, setSpinning] = useState(false);
@@ -64,9 +66,10 @@ const Reel = ({ spinTrigger }: ReelProps) => {
           transition: 'transform 0.1s ease',
         }}
       >
-        {symbols.map((sym, i) => (
+        {spinningSymbols.map((sym, i) => (
           <img src={sym} alt={`symbol ${i}`} key={i} className="symbol-img" />
         ))}
+
       </div>
     </div>
   );

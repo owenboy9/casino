@@ -5,15 +5,21 @@
   border: 2px solid #222;
   margin: 0 5px;
   background: #111;
+  position: relative;
 }
 
 .reel-strip {
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
+
 .symbol-img {
-  height: 60px;
+  display: block;
+  height: 60px; /* this value * your total symbols must be > reel-window height */
   width: 70px;
-  object-fit: contain;
+  margin: 0;
+  padding: 0;
 }
+
