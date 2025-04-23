@@ -1,0 +1,19 @@
+.reel-window {
+  height: 150px; /* 2.5 symbols @ 60px */
+  width: 70px;
+  overflow: hidden;
+  border: 2px solid #222;
+  margin: 0 5px;
+  background: #111;
+}
+
+.reel-strip {
+  display: flex;
+  flex-direction: column;
+}
+
+.symbol-img {
+  height: 60px;
+  width: 70px;
+  object-fit: contain;
+}
