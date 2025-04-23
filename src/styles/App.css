@@ -1,42 +1,61 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Playwrite+CU:wght@100..400&display=swap');
+
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* equal spacing between children */
+  align-items: center;
+  height: 100vh;
+  padding-left: 3rem; 
+  padding-right: 4.5rem;
+  box-sizing: border-box;
+  background-color: #6f7553;
+  gap: 0.5rem;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.top{
+  display:flex;
+  flex-direction: row;
+  margin-bottom: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-side, .right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+  
+.machine-img {
+  margin-top: 3rem;
+  height: 20rem;
+  border: rgba(0, 0, 0, 0.637) solid 0.6rem;
+  border-radius: 2%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.spinSign, .neonFlicker{
+  width: 80%;
 }
 
-.card {
-  padding: 2em;
+.bottom{
+  display: flex;
+  justify-content: flex-end; /* pushes content to the right */
+  width: 100%;
+  padding-bottom: 2rem;
+  padding-right: 8rem;
+  margin-top: -4rem;
 }
 
-.read-the-docs {
-  color: #888;
+.spinButton{
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.342);
+  border: none;
 }
