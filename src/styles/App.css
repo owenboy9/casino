@@ -61,18 +61,21 @@
   border: none;
   transition: transform 0.1s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 0 35px #f3a033d3;
-  border: 2px solid #f8b95a;
+  box-shadow: 0 0 45px #f1a33dd3,
+      0 0 15px #f1a33dd3,
+      0 0 25px #f1a33dd3,
+      0 0 25px #f1a33dd3;
+  border: 2px solid #f3c47e;
 }
 
 .spinButton:hover {
   box-shadow:
-    0 0 10px #f8b95a,
+    0 0 15px #f8b95a,
     0 0 20px #f8b95a,
     0 0 30px #f8b95a,
     0 0 40px #f8b95a;
   transform: scale(1.09);
-  border: 2px solid #f8b95a;
+  border: 3px solid #f3ce96;
 }
 
 
@@ -83,8 +86,8 @@
   align-items: center;
   gap: 1.3rem; /* space between each reel */
   position: absolute; /* or relative, depending on background placement */
-  top: 25.4%; /* adjust to align with machine slots */
-  left: 71.3%;
+  top: 24.78%; /* adjust to align with machine slots */
+  left: 71.38%;
   transform: translateX(-50%);
   z-index: 5;
 }
