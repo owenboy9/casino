@@ -31,11 +31,12 @@ const symbols = [
 
 type ReelProps = {
   spinTrigger: boolean;
+  onStop: (result: string) => void;
 };
 
 const spinningSymbols = [...symbols, ...symbols, ...symbols];
 
-const Reel = ({ spinTrigger }: ReelProps) => {
+const Reel = ({ spinTrigger, onStop }: ReelProps) => {
   const [position, setPosition] = useState(0);
   const [spinning, setSpinning] = useState(false);
 
@@ -55,6 +56,8 @@ const Reel = ({ spinTrigger }: ReelProps) => {
         if (count >= spinCountTarget) {
           clearInterval(interval);
           setSpinning(false);
+          const finalSymbol = symbols[position % totalSymbols];
+          onStop(finalSymbol);
         }
       }, 60); // You can also tweak the speed here if you want to slow it down slightly
     }

@@ -2,16 +2,25 @@ import { useEffect, useRef } from 'react';
 import background from '../assets/sounds/caretaker.mp3';
 import spinButton from '../assets/sounds/spinButton.wav';
 import spinning from '../assets/sounds/spinning.wav';
+import flowerWin from '../assets/sounds/flowerwin.mp3';
+import candyWin from '../assets/sounds/candywin.wav';
+import moneyWin from '../assets/sounds/money.mp3';
+
+type WinType = 'flower' | 'candy' | 'money' | null;
 
 type SoundManagerProps = {
   playSpinButton: boolean;
   playSpinning: boolean;
+  winType: WinType;
 };
 
-const SoundManager = ({ playSpinButton, playSpinning }: SoundManagerProps) => {
+const SoundManager = ({ playSpinButton, playSpinning, winType }: SoundManagerProps) => {
   const bgMusic = useRef<HTMLAudioElement | null>(null);
   const spinButtonSound = useRef<HTMLAudioElement | null>(null);
   const spinningSound = useRef<HTMLAudioElement | null>(null);
+  const flowerWinSound = useRef<HTMLAudioElement | null>(null);
+  const candyWinSound = useRef<HTMLAudioElement | null>(null);
+  const moneyWinSound = useRef<HTMLAudioElement | null>(null);
 
   // Load audio files once
   useEffect(() => {
@@ -22,6 +31,10 @@ const SoundManager = ({ playSpinButton, playSpinning }: SoundManagerProps) => {
       // Autoplay may fail in some browsers until user interaction
     });
 
+    flowerWinSound.current = new Audio(flowerWin);
+    candyWinSound.current = new Audio(candyWin);
+    moneyWinSound.current = new Audio(moneyWin);
+    
     spinButtonSound.current = new Audio(spinButton);
     spinningSound.current = new Audio(spinning);
   }, []);
@@ -41,6 +54,23 @@ const SoundManager = ({ playSpinButton, playSpinning }: SoundManagerProps) => {
       spinningSound.current.play();
     }
   }, [playSpinning]);
+
+  useEffect(() => {
+    if (!winType) return;
+
+    const soundMap: Record<Exclude<WinType, null>, HTMLAudioElement | null> = {
+      flower: flowerWinSound.current,
+      candy: candyWinSound.current,
+      money: moneyWinSound.current,
+    };
+
+    const sound = soundMap[winType];
+    if (sound) {
+      sound.currentTime = 0;
+      sound.play();
+    }
+  }, [winType]);
+
 
   return null;
 };
