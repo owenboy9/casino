@@ -45,7 +45,7 @@ const Reel = ({ spinTrigger }: ReelProps) => {
       const totalSymbols = symbols.length;
       let count = 0;
       const minSpins = totalSymbols * 2;
-      const extraSpins = Math.floor(Math.random() * 20);
+      const extraSpins = Math.floor(Math.random() * 15);
       const spinCountTarget = minSpins + extraSpins;
 
       const interval = setInterval(() => {
@@ -56,7 +56,7 @@ const Reel = ({ spinTrigger }: ReelProps) => {
           clearInterval(interval);
           setSpinning(false);
         }
-      }, 80); // You can also tweak the speed here if you want to slow it down slightly
+      }, 60); // You can also tweak the speed here if you want to slow it down slightly
     }
   }, [spinTrigger]);
 
