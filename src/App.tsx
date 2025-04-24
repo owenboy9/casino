@@ -1,4 +1,4 @@
-import slotMachine from './assets/framework/slotmachine.jpg';
+import slotMachine from './assets/framework/slotmachinearrows1.jpg';
 import spinSign from './assets/framework/spinSign.jpg';
 import neonFlicker from './assets/framework/neonFlicker.mp4';
 import './styles/App.css';

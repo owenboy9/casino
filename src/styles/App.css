@@ -58,6 +58,14 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.342);
   border: none;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 15px #f3a033d3;
+}
+
+.spinButton:hover {
+  box-shadow: 0 0 15px #f78e05d3;
+  transform: scale(1.05);
 }
 
 .reels-wrapper {
