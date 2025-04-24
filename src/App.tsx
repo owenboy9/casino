@@ -4,17 +4,29 @@ import neonFlicker from './assets/framework/neonFlicker.mp4';
 import './styles/App.css';
 import Reel from './components/Reel';
 import { useState } from 'react';
+import SoundManager from './components/SoundManager';
+
 
 function App() {
   const [spinTrigger, setSpinTrigger] = useState(false);
+  const [playSpinButton, setPlaySpinButton] = useState(false);
+  const [playSpinning, setPlaySpinning] = useState(false);
+
 
   const handleSpin = () => {
-    // This toggles the prop to retrigger useEffect in Reel
-    setSpinTrigger(prev => !prev);
-  };
+  setSpinTrigger(prev => !prev);
+  setPlaySpinButton(true);
+  setPlaySpinning(true);
+
+  // Reset the flags shortly after playing
+  setTimeout(() => setPlaySpinButton(false), 100); // short delay to allow sound to trigger
+  setTimeout(() => setPlaySpinning(false), 2000); // assumes 2s spinning sound
+};
+
 
   return (
     <div className="app-container">
+      <SoundManager playSpinButton={playSpinButton} playSpinning={playSpinning} />
       <div className="top">
         <div className="left-side">
           <img src={spinSign} className="spinSign" />
