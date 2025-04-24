@@ -97,8 +97,8 @@
   align-items: center;
   gap: 1.3rem; /* space between each reel */
   position: absolute; /* or relative, depending on background placement */
-  top: 24.78%; /* adjust to align with machine slots */
-  left: 71.38%;
+  top: 29.4%; /* adjust to align with machine slots */
+  left: 72%;
   transform: translateX(-50%);
   z-index: 5;
 }
