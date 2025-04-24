@@ -53,6 +53,7 @@
   font-family: "Bungee Spice", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: larger;
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -60,13 +61,20 @@
   border: none;
   transition: transform 0.1s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 0 15px #f3a033d3;
+  box-shadow: 0 0 35px #f3a033d3;
+  border: 2px solid #f8b95a;
 }
 
 .spinButton:hover {
-  box-shadow: 0 0 15px #f78e05d3;
-  transform: scale(1.05);
+  box-shadow:
+    0 0 10px #f8b95a,
+    0 0 20px #f8b95a,
+    0 0 30px #f8b95a,
+    0 0 40px #f8b95a;
+  transform: scale(1.09);
+  border: 2px solid #f8b95a;
 }
+
 
 .reels-wrapper {
   display: flex;
