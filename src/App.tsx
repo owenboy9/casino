@@ -18,7 +18,9 @@ function App() {
       <div className="top">
         <div className="left-side">
           <img src={spinSign} className="spinSign" />
-          <video src={neonFlicker} autoPlay loop muted className="neonFlicker" />
+          <div className="video-cropper">
+            <video src={neonFlicker} autoPlay loop muted className="neonFlicker" />
+          </div>
         </div>
 
         <div className="right-side">
