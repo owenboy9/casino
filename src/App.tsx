@@ -15,11 +15,11 @@ function App() {
   const [winType, setWinType] = useState<null | 'flower' | 'candy' | 'money'>(null);
 
   const handleSpin = () => {
+  setResults([]);        // Clear old reel results
+  setWinType(null);     // Clear previous win state
   setSpinTrigger(prev => !prev);
   setPlaySpinButton(true);
   setPlaySpinning(true);
-  setResults([]);
-  setWinType(null);
 
   // Reset the flags shortly after playing
   setTimeout(() => setPlaySpinButton(false), 100); // short delay to allow sound to trigger

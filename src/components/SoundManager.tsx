@@ -26,7 +26,7 @@ const SoundManager = ({ playSpinButton, playSpinning, winType }: SoundManagerPro
   useEffect(() => {
     bgMusic.current = new Audio(background);
     bgMusic.current.loop = true;
-    bgMusic.current.volume = 0.3;
+    bgMusic.current.volume = 0.1; // Set volume to 30%
     bgMusic.current.play().catch(() => {
       // Autoplay may fail in some browsers until user interaction
     });
