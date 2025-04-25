@@ -102,3 +102,8 @@
   transform: translateX(-50%);
   z-index: 5;
 }
+
+p{
+  color:  rgba(0, 0, 0, 0.637);
+  font-size: small;
+}

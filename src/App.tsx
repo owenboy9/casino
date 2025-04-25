@@ -84,7 +84,9 @@ function App() {
       <div className="bottom">
         <button className="spinButton" onClick={handleSpin}>spin</button>
       </div>
-
+      <div className="copyright">
+        <p>playing <em>it's just a burning memory</em>. the caretaker (stage 1)</p>
+      </div>
       <div className="lottie-overlay" id="win-animation"></div>
     </div>
   );
