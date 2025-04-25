@@ -29,11 +29,30 @@
   padding-top: 1rem;
 }
   
+.machine-container {
+  position: relative;
+  width: 600px; /* match your image's natural size */
+  height: auto;
+}
+
 .machine-img {
+  width: 100%;
+  display: block;
   margin-top: 3rem;
   height: 20rem;
   border: rgba(0, 0, 0, 0.637) solid 0.6rem;
   border-radius: 2%;
+}
+
+.reel-overlay {
+  position: absolute;
+  top: 34.5%;     /* tune this to match your image */
+  left: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; /* optional: lets clicks go through */
+  gap: 1.8rem; /* space between each reel */
 }
 
 .spinSign, .neonFlicker{

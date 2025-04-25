@@ -8,13 +8,6 @@
   position: relative;
 }
 
-.reel-strip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-
 .symbol-img {
   display: block;
   height: 60px; /* this value * your total symbols must be > reel-window height */

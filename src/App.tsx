@@ -92,15 +92,17 @@ function App() {
         </div>
 
         <div className="right-side">
-          <img src={slotMachine} className="machine-img" />
-          <div className="reels-wrapper">
-            {[...Array(5)].map((_, index) => (
-              <Reel 
-              key={index} 
-              spinTrigger={spinTrigger} 
-              onStop={(symbol) => handleReelStop(index, symbol)}
-              />
-            ))}
+          <div className="machine-container">
+            <img src={slotMachine} className="machine-img" alt="Slot Machine" />
+            <div className="reel-overlay">
+              {[...Array(5)].map((_, index) => (
+                <Reel
+                  key={index}
+                  spinTrigger={spinTrigger}
+                  onStop={(symbol) => handleReelStop(index, symbol)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
