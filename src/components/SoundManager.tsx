@@ -32,9 +32,9 @@ const SoundManager = ({ playSpinButton, playSpinning, winType }: SoundManagerPro
     });
 
     flowerWinSound.current = new Audio(flowerWin);
-    flowerWinSound.current.volume = 0.3; // Set volume to 30%
+    flowerWinSound.current.volume = 0.2; // Set volume to 20%
     candyWinSound.current = new Audio(candyWin);
-    candyWinSound.current.volume = 0.3; // Set volume to 30%
+    candyWinSound.current.volume = 0.2; // Set volume to 20%
     moneyWinSound.current = new Audio(moneyWin);
     moneyWinSound.current.volume = 0.3; // Set volume to 30%
     spinButtonSound.current = new Audio(spinButton);

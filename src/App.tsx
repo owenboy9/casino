@@ -3,7 +3,7 @@ import spinSign from './assets/framework/spinSign.jpg';
 import neonFlicker from './assets/framework/neonFlicker.mp4';
 import './styles/App.css';
 import Reel from './components/Reel';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SoundManager from './components/SoundManager';
 import LottieOverlay from './components/LottieOverlay';
 
@@ -14,6 +14,17 @@ function App() {
   const [playSpinning, setPlaySpinning] = useState(false);
   const [results, setResults] = useState<string[]>([]);
   const [winType, setWinType] = useState<null | 'flower' | 'candy' | 'money'>(null);
+
+  useEffect(() => {
+    if (winType) {
+      const timer = setTimeout(() => {
+        setWinType(null); // clear the win type after 2 seconds
+      }, 2000);
+
+      return () => clearTimeout(timer); // cleanup if component re-renders quickly
+    }
+  }, [winType]);
+
 
   const handleSpin = () => {
   setResults([]);        // Clear old reel results
@@ -60,6 +71,9 @@ function App() {
   return (
     <div className="app-container">
       <SoundManager playSpinButton={playSpinButton} playSpinning={playSpinning} winType={winType}/>
+      <div className="lottie-overlay">
+        <LottieOverlay winType={winType} />
+      </div>
 
       <div className="top">
         <div className="left-side">

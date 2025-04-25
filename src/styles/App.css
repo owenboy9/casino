@@ -89,6 +89,9 @@
   border: 3px solid #f3ce96;
 }
 
+.right-side {
+  position: relative;
+}
 
 .reels-wrapper {
   display: flex;
@@ -97,8 +100,8 @@
   align-items: center;
   gap: 1.3rem; /* space between each reel */
   position: absolute; /* or relative, depending on background placement */
-  top: 25.2%; /* adjust to align with machine slots */
-  left: 72%;
+  top: 31.8%; /* adjust to align with machine slots */
+  left: 50%;
   transform: translateX(-50%);
   z-index: 5;
 }
@@ -106,4 +109,14 @@
 p{
   color:  rgba(0, 0, 0, 0.637);
   font-size: small;
+}
+
+.lottie-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  pointer-events: none; /* so it doesn't block clicks */
 }

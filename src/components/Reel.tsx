@@ -49,19 +49,22 @@ const Reel = ({ spinTrigger, onStop }: ReelProps) => {
       const extraSpins = Math.floor(Math.random() * 15);
       const spinCountTarget = minSpins + extraSpins;
 
+      let finalIndex = 0;
+
       const interval = setInterval(() => {
-        setPosition((prev) => (prev + 1) % totalSymbols);
+        finalIndex = (finalIndex + 1) % totalSymbols;
+        setPosition(finalIndex);
         count++;
 
         if (count >= spinCountTarget) {
           clearInterval(interval);
           setSpinning(false);
-          const finalSymbol = spinningSymbols[position % totalSymbols];
-          if (onStop){
-            onStop(finalSymbol);
-          }           
+          const finalSymbol = spinningSymbols[finalIndex];
+          if (onStop) onStop(finalSymbol);
         }
-      }, 60); // You can tweak the speed here if you want to slow it down slightly
+        
+    }, 60); // Adjust the speed of the spin here (60ms per symbol)
+ // You can tweak the speed here if you want to slow it down slightly
     }
   }, [spinTrigger]);
 
