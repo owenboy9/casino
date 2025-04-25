@@ -61,7 +61,7 @@ const Reel = ({ spinTrigger, onStop }: ReelProps) => {
             onStop(finalSymbol);
           }           
         }
-      }, 60); // You can also tweak the speed here if you want to slow it down slightly
+      }, 60); // You can tweak the speed here if you want to slow it down slightly
     }
   }, [spinTrigger]);
 
@@ -77,7 +77,6 @@ const Reel = ({ spinTrigger, onStop }: ReelProps) => {
         {spinningSymbols.map((sym, i) => (
           <img src={sym} alt={`symbol ${i}`} key={i} className="symbol-img" />
         ))}
-
       </div>
     </div>
   );

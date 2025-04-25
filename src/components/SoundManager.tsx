@@ -4,7 +4,7 @@ import spinButton from '../assets/sounds/spinButton.wav';
 import spinning from '../assets/sounds/spinning.wav';
 import flowerWin from '../assets/sounds/flowerwin.mp3';
 import candyWin from '../assets/sounds/candywin.wav';
-import moneyWin from '../assets/sounds/money.mp3';
+import moneyWin from '../assets/sounds/money.wav';
 
 type WinType = 'flower' | 'candy' | 'money' | null;
 
@@ -26,15 +26,17 @@ const SoundManager = ({ playSpinButton, playSpinning, winType }: SoundManagerPro
   useEffect(() => {
     bgMusic.current = new Audio(background);
     bgMusic.current.loop = true;
-    bgMusic.current.volume = 0.1; // Set volume to 30%
+    bgMusic.current.volume = 0.1; // Set volume to 10%
     bgMusic.current.play().catch(() => {
       // Autoplay may fail in some browsers until user interaction
     });
 
     flowerWinSound.current = new Audio(flowerWin);
+    flowerWinSound.current.volume = 0.3; // Set volume to 30%
     candyWinSound.current = new Audio(candyWin);
+    candyWinSound.current.volume = 0.3; // Set volume to 30%
     moneyWinSound.current = new Audio(moneyWin);
-    
+    moneyWinSound.current.volume = 0.3; // Set volume to 30%
     spinButtonSound.current = new Audio(spinButton);
     spinningSound.current = new Audio(spinning);
   }, []);
@@ -70,7 +72,6 @@ const SoundManager = ({ playSpinButton, playSpinning, winType }: SoundManagerPro
       sound.play();
     }
   }, [winType]);
-
 
   return null;
 };

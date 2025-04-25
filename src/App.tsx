@@ -5,6 +5,7 @@ import './styles/App.css';
 import Reel from './components/Reel';
 import { useState } from 'react';
 import SoundManager from './components/SoundManager';
+import LottieOverlay from './components/LottieOverlay';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
   return (
     <div className="app-container">
       <SoundManager playSpinButton={playSpinButton} playSpinning={playSpinning} winType={winType}/>
+
       <div className="top">
         <div className="left-side">
           <img src={spinSign} className="spinSign" />
@@ -87,7 +89,6 @@ function App() {
       <div className="copyright">
         <p>playing <em>it's just a burning memory</em>. the caretaker (stage 1)</p>
       </div>
-      <div className="lottie-overlay" id="win-animation"></div>
     </div>
   );
 }
