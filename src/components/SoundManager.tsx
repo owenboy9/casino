@@ -57,13 +57,13 @@ const SoundManager = ({ playSpinButton, playSpinning, winType }: SoundManagerPro
     }
   }, [playSpinning]);
 
-  const handleUserInteraction = () => {
-    if (bgMusic.current && bgMusic.current.paused) {
-      bgMusic.current
-        .play()
-        .catch((e) => console.warn('Autoplay prevented:', e));
-    }
-  };
+    const handleUserInteraction = () => {
+      if (bgMusic.current && bgMusic.current.paused) {
+        bgMusic.current
+          .play()
+          .catch((e) => console.warn('Autoplay prevented:', e));
+      }
+    };
 
   useEffect(() => {
     const onPlayRequest = () => handleUserInteraction();
