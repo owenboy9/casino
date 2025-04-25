@@ -6,6 +6,7 @@ import Reel from './components/Reel';
 import { useState, useEffect } from 'react';
 import SoundManager from './components/SoundManager';
 import LottieOverlay from './components/LottieOverlay';
+import { triggerBackgroundMusic } from './components/SoundManager';
 
 
 function App() {
@@ -25,6 +26,15 @@ function App() {
     }
   }, [winType]);
 
+  useEffect(() => {
+  const handleKey = (e: KeyboardEvent) => {
+    if (e.key === '1') setWinType('flower');
+    if (e.key === '2') setWinType('candy');
+    if (e.key === '3') setWinType('money');
+  };
+  window.addEventListener('keydown', handleKey);
+  return () => window.removeEventListener('keydown', handleKey);
+}, []);
 
   const handleSpin = () => {
   setResults([]);        // Clear old reel results
@@ -32,6 +42,7 @@ function App() {
   setSpinTrigger(prev => !prev);
   setPlaySpinButton(true);
   setPlaySpinning(true);
+  triggerBackgroundMusic();
 
   // Reset the flags shortly after playing
   setTimeout(() => setPlaySpinButton(false), 100); // short delay to allow sound to trigger
@@ -96,11 +107,6 @@ function App() {
 
       <div className="bottom">
         <button className="spinButton" onClick={handleSpin}>spin</button>
-      </div>
-      <div className="test-buttons">
-        <button onClick={() => setWinType('flower')}>🌸 Test Flower Win</button>
-        <button onClick={() => setWinType('candy')}>🍬 Test Candy Win</button>
-        <button onClick={() => setWinType('money')}>💰 Test Money Win</button>
       </div>
 
       <div className="copyright">
