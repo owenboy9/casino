@@ -33,6 +33,8 @@
   position: relative;
   width: 600px; /* match your image's natural size */
   height: auto;
+  margin-bottom: 0.5rem;
+  margin-right: 0.7rem;;
 }
 
 .machine-img {
@@ -76,7 +78,6 @@
   width: 100%;
   padding-bottom: 1rem;
   padding-right: 9rem;
-  margin-top: -1.5rem;
 }
 
 .spinButton{
