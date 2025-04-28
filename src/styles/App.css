@@ -69,16 +69,16 @@
   0% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   10% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   15% {
     color: rgba(0, 0, 0, 0.068);
@@ -90,16 +90,16 @@
   18% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   25% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   30% {
     color: rgba(0, 0, 0, 0.068);
@@ -111,16 +111,16 @@
   40% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+     0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   50% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   55% {
     color: rgba(0, 0, 0, 0.068);
@@ -132,16 +132,16 @@
   57% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+     0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   70% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   75% {
     color: rgba(0, 0, 0, 0.068);
@@ -153,16 +153,16 @@
   90% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
   100% {
     color:#f7cb06;
     text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   }
 }
 
@@ -183,9 +183,9 @@ h1 {
   color:#f7cb06;
   letter-spacing: 7px;
   text-shadow: 
-      0 0 15px yellow, 
-      0 0 25px yellow, 
-      0 0 25px yellow;
+      0 0 45px yellow,
+      0 0 35px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   font-size: 7rem;
   font-family: "Monoton", sans-serif;
   font-weight: 400;
@@ -214,7 +214,7 @@ h1 {
   border: none;
   transition: transform 0.1s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 0 45px #f1c73dd3,
+  box-shadow: 0 0 45px yellow,
       0 0 15px #f1c73dd3,
       0 0 25px #f1c73dd3,
       0 0 25px #f1c73dd3;
