@@ -81,7 +81,7 @@
       0 0 25px #f1c73dd3;
   }
   15% {
-    color: rgba(0, 0, 0, 0.068);
+    color: rgba(0, 0, 0, 0.349);
     text-shadow: 
       0 0 5px rgba(95, 95, 94, 0.781),
       0 0 5px rgba(95, 95, 94, 0.781),
@@ -102,7 +102,7 @@
       0 0 25px #f1c73dd3;
   }
   30% {
-    color: rgba(0, 0, 0, 0.068);
+    color: rgba(0, 0, 0, 0.349);
     text-shadow: 
       0 0 5px rgba(95, 95, 94, 0.781),
       0 0 5px rgba(95, 95, 94, 0.781),
@@ -123,7 +123,7 @@
       0 0 25px #f1c73dd3;
   }
   55% {
-    color: rgba(0, 0, 0, 0.068);
+    color: rgba(0, 0, 0, 0.349);
     text-shadow: 
       0 0 5px rgba(95, 95, 94, 0.781),
       0 0 5px rgba(95, 95, 94, 0.781),
@@ -144,7 +144,7 @@
       0 0 25px #f1c73dd3;
   }
   75% {
-    color: rgba(0, 0, 0, 0.068);
+    color: rgba(0, 0, 0, 0.349);
     text-shadow: 
       0 0 5px rgba(95, 95, 94, 0.781),
       0 0 5px rgba(95, 95, 94, 0.781),
@@ -175,7 +175,7 @@
   font-weight: 400;
   font-style: normal;
   margin-top: 0rem;
-  padding-left: 3.8rem;;
+  padding-left: 3rem;;
 }
 
 h1 {
@@ -219,6 +219,7 @@ h1 {
       0 0 25px #f1c73dd3,
       0 0 25px #f1c73dd3;
   border: 2px solid #f3c47e;
+  margin-top: 1rem;
 }
 
 .spinButton:hover {
