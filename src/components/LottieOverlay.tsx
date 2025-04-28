@@ -21,8 +21,8 @@ const LottieOverlay = ({ winType }: { winType: 'flower' | 'candy' | 'money' | nu
       setVisible(true); // trigger fade-in
 
       const hideTimeout = setTimeout(() => {
-        setVisible(false); // trigger fade-out after 2 seconds
-      }, 2000);
+        setVisible(false); // trigger fade-out after 4 seconds
+      }, 5000);
 
       return () => clearTimeout(hideTimeout); // cleanup in case winType changes early
     }
