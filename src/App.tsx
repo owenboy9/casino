@@ -94,11 +94,8 @@ function App() {
       {/* top section containing the spin sign and video background */}
       <div className="top">
         <div className="left-side">
-          <img src={spinSign} className="spinSign" alt="Spin sign" />
-          <div className="video-cropper">
-            {/* neon flicker video */}
-            <video src={neonFlicker} autoPlay loop muted className="neonFlicker" />
-          </div>
+          <h1>Spin</h1>
+          <h1 className="neon-glitch">to win !</h1>
         </div>
 
         <div className="right-side">

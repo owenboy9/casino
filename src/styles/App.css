@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
 
 .app-container {
@@ -27,6 +28,12 @@
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
+}
+
+.left-side{
+  padding-top: 3rem;
+  margin-right: 5rem;
+  margin-left: 2rem;
 }
   
 .machine-container {
@@ -57,19 +64,133 @@
   gap: 1.8rem; /* space between each reel */
 }
 
-.spinSign, .neonFlicker{
-  width: 80%;
+
+@keyframes glitch {
+  0% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  10% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  15% {
+    color: rgba(0, 0, 0, 0.068);
+    text-shadow: 
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781);
+  }
+  18% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  25% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  30% {
+    color: rgba(0, 0, 0, 0.068);
+    text-shadow: 
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781);
+  }
+  40% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  50% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  55% {
+    color: rgba(0, 0, 0, 0.068);
+    text-shadow: 
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781);
+  }
+  57% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  70% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  75% {
+    color: rgba(0, 0, 0, 0.068);
+    text-shadow: 
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781),
+      0 0 5px rgba(95, 95, 94, 0.781);
+  }
+  90% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
+  100% {
+    color:#f7cb06;
+    text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  }
 }
 
-.video-cropper {
-  width: 70%;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  margin-right: 0;
+.neon-glitch {
+  font-size: 3.5rem;
+  animation: glitch 9s steps(1) infinite;
+  letter-spacing: 4px;
+  transform: rotate(-6deg); 
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 0rem;
+  padding-left: 3.8rem;;
 }
 
-.neonFlicker {
-  margin-left: 5.5rem;
+h1 {
+  transform: rotate(-13deg);
+  color:#f7cb06;
+  letter-spacing: 7px;
+  text-shadow: 
+      0 0 15px yellow, 
+      0 0 25px yellow, 
+      0 0 25px yellow;
+  font-size: 7rem;
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 0rem;
 }
 
 .bottom{
@@ -92,10 +213,10 @@
   border: none;
   transition: transform 0.1s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  box-shadow: 0 0 45px #f1a33dd3,
-      0 0 15px #f1a33dd3,
-      0 0 25px #f1a33dd3,
-      0 0 25px #f1a33dd3;
+  box-shadow: 0 0 45px #f1c73dd3,
+      0 0 15px #f1c73dd3,
+      0 0 25px #f1c73dd3,
+      0 0 25px #f1c73dd3;
   border: 2px solid #f3c47e;
 }
 
