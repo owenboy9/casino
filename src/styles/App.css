@@ -202,10 +202,11 @@ h1 {
 }
 
 .spinButton{
-  font-family: "Bungee Spice", sans-serif;
+  font-family: "Monoton", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: larger;
+  color:rgb(255, 196, 0);
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -222,10 +223,10 @@ h1 {
 
 .spinButton:hover {
   box-shadow:
-    0 0 15px #f8b95a,
-    0 0 20px #f8b95a,
-    0 0 30px #f8b95a,
-    0 0 40px #f8b95a;
+    0 0 15px #f8b421,
+    0 0 20px #f8b421,
+    0 0 30px #f8b421,
+    0 0 40px #f8b421;
   transform: scale(1.09);
   border: 3px solid #f3ce96;
 }
